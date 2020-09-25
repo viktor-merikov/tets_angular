@@ -1,0 +1,12 @@
+<div class="popup">
+   <div class="popup-body">
+      <div class="popup-content">
+         <div class="popup-title">{{title}}</div>
+         <textarea class="popup-text" id="" cols="60" rows="10" [formControl]="commentText"></textarea>
+         <div class="popup-buttons">
+            <button class="popup-button success" (click)="saveComment()">Send</button>
+            <button class="popup-button warning" (click)="closePopupWindow()">Close</button>
+         </div>
+      </div>
+   </div>
+</div>

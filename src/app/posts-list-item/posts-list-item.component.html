@@ -1,0 +1,39 @@
+<div class="posts-list-item">
+
+   <div class="vote-button">
+      <i class="fa fa-arrow-up" aria-hidden="true" (click)="setVote(1)"></i>
+      <span>{{currentVoteCount}}</span>
+      <i class="fa fa-arrow-down" aria-hidden="true" (click)="setVote(-1)"></i>
+   </div>
+
+   <img class=" post-image" src={{post.imageUrl}} alt="tree">
+
+   <div class="post-info">
+      <div class="post-title">{{post.title}}</div>
+      <div class="post-time">Submitted on {{post.date | date:"MMM dd, yyyy HH:MM"}}</div>
+      <div class="post-comments" (click)="expanded=!expanded">{{post.comments.length}} comments</div>
+   </div>
+
+</div>
+
+<div class="post-comments-list" *ngIf="expanded">
+   <span *ngIf="expanded" (click)="openModalComment(post.title)">Leave comment</span>
+   <ul *ngIf="post.comments.length > 0">
+      <li *ngFor="let comment of post.comments">
+
+         <h3>{{comment.username}}</h3>
+         <p>{{comment.comment}}</p>
+         <span *ngIf="expanded" (click)="openModalComment(post.title, comment.id)">Leave comment</span>
+
+         <div class="comment-comments-list">
+            <ul>
+               <li *ngFor="let comment of comment.comments">
+                  <h3>{{comment.username}}</h3>
+                  <p>{{comment.comment}}</p>
+               </li>
+            </ul>
+         </div>
+
+      </li>
+   </ul>
+</div>

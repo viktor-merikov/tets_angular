@@ -1,0 +1,26 @@
+<div class="add-post-page">
+   <form [formGroup]="form" (ngSubmit)="createPost()">
+      <h2>Form of new post</h2>
+
+      <div>
+         <div class="form-element">
+            <label>Title: </label>
+            <input type="text" formControlName="title">
+         </div>
+
+         <div class="form-element">
+            <label>Image URL: </label>
+            <input type="text" formControlName="imageUrl" (paste)="changeImageUrl($event)"
+               (keyup)="changeImageUrl($event)">
+         </div>
+      </div>
+
+      <img [src]="imageUrl" alt="Wrong link on image" *ngIf="imageUrl">
+
+      <span>
+         <button type="submit" [disabled]="form.invalid">Submit</button>
+         <button type="button" class="warning" (click)="returnToMain()">Return</button>
+      </span>
+
+   </form>
+</div>

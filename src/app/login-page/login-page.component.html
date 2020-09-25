@@ -1,0 +1,10 @@
+<div class="login-page">
+   <p>Username:</p>
+   <input class="username" [class.error-input]="username.invalid && !username.pristine" type="text"
+      placeholder="type here..." [formControl]="username">
+   <br>
+   <br>
+   <span style="color: red;" *ngIf="username.invalid && !username.pristine">Is required field must contain min 3
+      chars<br><br></span>
+   <button type="submit" (click)="login()" [disabled]="username.invalid">Submit</button>
+</div>

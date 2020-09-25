@@ -1,0 +1,90 @@
+.posts-list-item {
+   display: flex;
+   flex-direction: row;
+   margin: 0 0 50px 0;
+   max-width: 800px;
+}
+
+.vote-button {
+   min-width: 70px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 2rem;
+   color: #afafaf;
+}
+
+i:hover {
+   color: #8f8f8f;
+   cursor: pointer;
+}
+
+.posts-list-item > img {
+   display: block;
+   margin: 0 20px;
+   max-width: 250px;
+   height: auto;
+}
+
+.post-info {
+   font-family: Arial, Helvetica, sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.post-title {
+   font-size: 1.7rem;
+}
+
+.post-comments {
+   font-weight: 700;
+   cursor: pointer;
+}
+
+.post-comments:hover {
+   color: sienna;
+}
+
+/* Comments list styles */
+
+.post-comments-list > ul {
+   list-style: none;
+   text-align: right;
+   max-height: 300px;
+   overflow-y: auto;
+   border-top: 2px solid silver;
+   margin-bottom: 50px;
+}
+
+.post-comments-list > ul > li {
+   margin-bottom: 10px;
+}
+
+.post-comments-list > ul > li > span {
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.comment-comments-list > ul {
+   text-align: left;
+}
+
+.post-comments-list span {
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: underline;
+   font-weight: 400;
+   cursor: pointer;
+}
+
+.post-comments-list span:hover {
+   color: lightblue;
+   text-decoration: none;
+}
+
+.post-comments-list p {
+   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+      sans-serif;
+   font-size: 1.1rem;
+   font-style: italic;
+}

@@ -1,0 +1,10 @@
+<app-popup *ngIf="openPopup" [title]="title" [commentId]="commentId" (closePopup)="closePopup($event)"></app-popup>
+<div class="main-page">
+   <span>
+      <button routerLink="/addpost">Add post <i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button class="warning" (click)="logout()">Log out <i class="fa fa-sign-out" aria-hidden="true"></i></button>
+   </span>
+   <div class="main-posts-list">
+      <app-posts-list></app-posts-list>
+   </div>
+</div>

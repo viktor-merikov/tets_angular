@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+/* Zero condition */
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkot-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   margin: 0;
+}
+a,
+a:visited {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: none;
+}
+ul li {
+   list-style: none;
+}
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
+/* For buttons */
+button {
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 20px 20px;
+   width: 100px;
+   height: 50px;
+   background-color: gray;
+   color: honeydew;
+   border-radius: 5px;
+   font-size: 1.2rem;
+}
+
+button:hover {
+   background-color: #27beaa;
+}
+
+button:disabled {
+   background-color: #e4e4e4;
+   cursor: default;
+}
+
+.success {
+   background-color: #21a121;
+}
+
+.warning {
+   background-color: #b33838;
+}

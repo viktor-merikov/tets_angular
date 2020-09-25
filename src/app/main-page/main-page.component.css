@@ -1,0 +1,9 @@
+.main-page {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.main-posts-list {
+   border-top: 2px solid silver;
+   padding-top: 20px;
+}
